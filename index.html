@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Coordinates Display</title>
+    
+    
+</head>
+<body>
+    <h1 id="click">
+        <p>HELLO GUVI.</p>
+    </h1>
+    <span id="coordinates">Coordinates.</span>
+
+    <script>
+        
+        function displayCoordinates(eve) {
+            var res = document.getElementById('coordinates');
+            res.innerHTML = 'X: ' + eve.clientX + ' Y:' + eve.clientY;
+        }
+
+       
+        var res = document.getElementById('click');
+        res.addEventListener('mousemove', displayCoordinates);
+    </script>
+</body>
+</html>
